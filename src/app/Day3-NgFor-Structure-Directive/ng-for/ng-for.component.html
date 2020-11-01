@@ -1,0 +1,25 @@
+<!--
+  - $implicit: Item implocit context variable
+  - index: so thu tu cua item hien tai
+  - count: do dai cua item hien tai
+  - first: true neu nhu item do la item dau tien trong day
+  - last: true neu nhu item do la item cuoi cung
+  - even: true neu nhu item do la item chan
+  - odd: true neu nhu item do la item le
+ -->
+
+<ul>
+  <li *ngFor="let user of users; index as idx; count as total; first as isFirst; last as isLast;
+  even as isEven; odd as isOdd">
+
+  <span>At index {{idx}}</span>
+  <br>
+  <span>Id: {{user.id}} - Name: {{user.name}} - Phone: {{user.phone}}</span>
+  <br>
+  <span>It is {{isEven ? 'even number': 'odd number'}}</span>
+  <br>
+  <span *ngIf="isLast">It is last item</span>
+  <span *ngIf="isFirst">It is first item</span>
+  <br><br>
+</li>
+</ul>

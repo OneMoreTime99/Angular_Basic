@@ -1,0 +1,18 @@
+<!-- Class Binding
+     Data Binding -->
+<button (click)="isDanger = !isDanger">Danger</button>
+<button (click)="isWarning = !isWarning">Warning</button>
+
+<!-- <div class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></div> -->
+
+<!--
+  - [class.ten-class]
+  - [class] = "array"
+  - [class] = Object
+  - [class] = "variable"
+ -->
+
+ <!-- <div class="box" [class]="{'red-border': isDanger , 'yellow-background': isWarning}"></div> -->
+
+
+ <div [class]="classes"></div>
